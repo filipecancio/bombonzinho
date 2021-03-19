@@ -14,10 +14,9 @@ jobs:
         with:
             node-version: 12
             registry-url: https://npm.pkg.github.com/
-            scope: '@bombonzinho'
+            scope: '@filipecancio'
       - run: npm install && npm ci && npm run build
-      - run: npm run compile
-      - run: npm publish
+      - run: npm run compile && npm publish --access public
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
