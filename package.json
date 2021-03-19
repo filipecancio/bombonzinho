@@ -1,5 +1,5 @@
 {
-  "name": "bombonzinho",
+  "name": "@filipecancio/bombonzinho",
   "version": "0.0.2",
   "main": "./dist/index.ts",
   "files": [
