@@ -17,6 +17,10 @@ jobs:
             scope: '@filipecancio'
       - run: npm install && npm ci && npm run build
       - run: npm run compile && npm publish --access public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_REGISTRY_URL: https://npm.pkg.github.com/
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
