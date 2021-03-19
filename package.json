@@ -57,5 +57,8 @@
     "compile": "rollup -c",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@filipecancio"
   }
 }
