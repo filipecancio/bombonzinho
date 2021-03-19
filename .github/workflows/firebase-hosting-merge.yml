@@ -25,6 +25,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    - run: npm install
     - run: npm login --scope=@filipe.cancio --registry=https://npm.pkg.github.com 
       env:
         username: ${{ github.actor }}
