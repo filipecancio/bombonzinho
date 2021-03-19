@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@YOUR_USERNAME'
+          scope: '@filipecancio'
       - run: npm install
       - run: npm run compile && npm publish --access public
         env:
