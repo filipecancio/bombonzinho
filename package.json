@@ -1,6 +1,6 @@
 {
-  "name": "@filipe.cancio/bombonzinho",
-  "version": "0.0.1",
+  "name": "@filipecancio/bombonzinho",
+  "version": "0.0.2",
   "main": "./dist/index.ts",
   "files": [
     "dist",
@@ -57,8 +57,5 @@
     "compile": "rollup -c",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@filipecancio"
   }
 }
