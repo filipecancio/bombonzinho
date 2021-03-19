@@ -8,18 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-            node-version: 12
-            registry-url: https://npm.pkg.github.com/
-            scope: '@filipecancio'
       - run: npm install && npm ci && npm run build
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm run compile && npm publish --access public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_REGISTRY_URL: https://npm.pkg.github.com/
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -27,3 +16,16 @@ jobs:
           projectId: bombonzinho-storybook
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    needs: run-npm-test
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - run: npm login --scope=@filipe.cancio --registry=https://npm.pkg.github.com 
+      env:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        email: filipe.cancio@outlook.com
+    - run: npm run compile && npm publish --access public
+
