@@ -11,8 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+            node-version: 12
+            registry-url: https://npm.pkg.github.com/
+            scope: '@bombonzinho'
       - run: npm install && npm ci && npm run build
       - run: npm run compile
+      - run: npm publish
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

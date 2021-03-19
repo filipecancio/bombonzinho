@@ -7,7 +7,7 @@
     "README.md"
   ],
   "module": "./build/index.es.js",
-  "author": "Dennis Schneider",
+  "author": "Filipe Câncio",
   "license": "MIT",
   "peerDependencies": {
     "react": "16.13.1",
@@ -58,6 +58,6 @@
     "test": "jest"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry":"https://npm.pkg.github.com/@bombonzinho"
   }
 }
