@@ -5,7 +5,6 @@
   "module": "./build/index.es.js",
   "author": "Dennis Schneider",
   "license": "MIT",
-  "dependencies": {},
   "peerDependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1"
@@ -14,10 +13,10 @@
     "@babel/core": "^7.11.6",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "@storybook/addon-actions": "^6.0.22",
-    "@storybook/addon-links": "^6.0.22",
-    "@storybook/addons": "^6.0.22",
-    "@storybook/react": "^6.0.22",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/addons": "^6.1.21",
+    "@storybook/react": "^6.1.21",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@types/jest": "^26.0.14",
