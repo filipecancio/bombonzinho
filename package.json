@@ -1,7 +1,11 @@
 {
-  "name": "component-library-starter",
-  "version": "1.0.0",
-  "main": "./build/index.js",
+  "name": "@filipe.cancio/bombonzinho",
+  "version": "0.0.1",
+  "main": "./dist/index.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "module": "./build/index.es.js",
   "author": "Dennis Schneider",
   "license": "MIT",
@@ -49,7 +53,11 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "npm run build-storybook -- -o ./public",
+    "compile": "rollup -c",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   }
 }
