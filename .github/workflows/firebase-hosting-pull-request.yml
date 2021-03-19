@@ -13,6 +13,8 @@ jobs:
             registry-url: https://npm.pkg.github.com/
             scope: '@filipecancio'
       - run: npm install && npm ci && npm run build
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run compile && npm publish --access public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
