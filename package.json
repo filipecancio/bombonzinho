@@ -44,7 +44,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c",
+    "build": "rollup -c && npm run build-storybook -- -o ./public",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test": "jest"
   }
