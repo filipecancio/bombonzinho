@@ -1,0 +1,1 @@
+{"version":3,"file":"index.ts","sources":["../src/hello-world.tsx"],"sourcesContent":["import React from \"react\";\n\nconst HelloWorld: React.FC = () => {\n  return <div>Hello World</div>;\n};\n\nexport default HelloWorld;\n"],"names":["React"],"mappings":";;;;;;;;;;IAEM,UAAU,GAAa;IAC3B,OAAOA,mEAAsB,CAAC;AAChC;;;;"}
